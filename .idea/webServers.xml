@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ca94bafe-0b5b-4d22-82d7-1c3f03c6d624" name="10.10.5.120" url="http://10.10.5.120">
+        <fileTransfer host="10.10.5.120" port="22" rootFolder="/home/UDC/89560/linux/Escritorio/FIC_BOX" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
