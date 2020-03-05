@@ -134,7 +134,7 @@ void votarPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista, int *votosTotale
         N = getItem(p, *lista).numVotes;
         N++;
         updateVotes(N, p, lista);
-        printf("* Vote: party %s numvotes %d\n", name, getItem(p, *lista).numVotes);
+        printf("* Vote: party %s numVotes %d\n", name, getItem(p, *lista).numVotes);
         *votosTotales = *votosTotales + 1;
     }
 }

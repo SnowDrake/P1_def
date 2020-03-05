@@ -44,7 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTEST_LIST"/>
+					<Add option="-DDYNAMIC_LIST"/>
 					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
@@ -66,7 +66,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTEST_LIST"/>
+					<Add option="-DDYNAMIC_LIST"/>
 					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
@@ -88,7 +88,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTEST_LIST"/>
+					<Add option="-DDYNAMIC_LIST"/>
 					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
@@ -110,7 +110,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DTEST_LIST"/>
+					<Add option="-DDYNAMIC_LIST"/>
 					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
@@ -126,11 +126,11 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/list/list.h">
+		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/dynamic_list.c">
 			<Option target="main"/>
 			<Option target="test_lists"/>
 		</Unit>
-		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/list/list_l.o">
+		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/dynamic_list.h">
 			<Option target="main"/>
 			<Option target="test_lists"/>
 		</Unit>

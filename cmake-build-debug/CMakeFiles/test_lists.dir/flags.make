@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS = -g   -Wall -Wextra -std=gnu99
 
-C_DEFINES = -DINPUT_FILE=\"new.txt\" -DTEST_LIST
+C_DEFINES = -DDYNAMIC_LIST -DINPUT_FILE=\"new.txt\"
 
 C_INCLUDES = 
 
