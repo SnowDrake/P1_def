@@ -34,7 +34,7 @@ bool copyList(tList L1, tList* L2);
 void updateVotes(tNumVotes a, tPosL p, tList* L);
 void deleteAtPosition(tPosL p, tList* L);
 void deleteList(tList* L);
-tPosL findItem(const tPartyName name, tList L);
+tPosL findItem(tPartyName name, tList L);
 bool isEmptyList(tList L);
 tItemL getItem(tPosL p, tList L);
 tPosL first(tList L);

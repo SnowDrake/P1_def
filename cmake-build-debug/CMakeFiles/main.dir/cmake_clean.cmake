@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "../bin/main"
   "../bin/main.pdb"
-  "CMakeFiles/main.dir/dynamic_list.c.o"
   "CMakeFiles/main.dir/main.c.o"
+  "CMakeFiles/main.dir/static_list.c.o"
 )
 
 # Per-language clean rules from dependency scanning.

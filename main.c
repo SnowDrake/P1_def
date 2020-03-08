@@ -85,10 +85,10 @@ void print_list_STATS(tList list, char param[NAME_LENGTH_LIMIT+1], int votosTota
         while (pos != LNULL) {
             item = getItem(pos, list);
             if (votosTotales == 0) {
-                printf("Party %s numVotes %d (0.00%%)\n", item.partyName, item.numVotes);
+                printf("Party %s numvotes %d (0.00%%)\n", item.partyName, item.numVotes);
             }
             else if (votosTotales > 0) {
-                printf("Party %s numVotes %d (%.2f%%)\n", item.partyName, item.numVotes, ((float)item.numVotes/(float)votosTotales)*100);
+                printf("Party %s numvotes %d (%.2f%%)\n", item.partyName, item.numVotes, ((float)item.numVotes/(float)votosTotales)*100);
             }
             pos = next(pos, list);
         }
@@ -100,7 +100,7 @@ void print_list_STATS(tList list, char param[NAME_LENGTH_LIMIT+1], int votosTota
     printf("Participation: %d votes from %s voters (%.2f%%)\n", votosTotales + votosNulos, param, (((float)votosTotales+(float)votosNulos)/devolverParam(param)*100));
 }
 
-void crearPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista) {
+void crearPartido(tPartyName name, tList *lista) {
     struct tItemL newItem;
     newItem.numVotes = 0;
     strcpy(newItem.partyName, name);
@@ -122,7 +122,7 @@ void crearPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista) {
 
 }
 
-void votarPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista, int *votosTotales, int *votosNulos) {
+void votarPartido(tPartyName name, tList *lista, int *votosTotales, int *votosNulos) {
     tPosL p;
     p = findItem(name, *lista);
     int N = 0; // Variable que incrementa los votos del partido
@@ -134,7 +134,7 @@ void votarPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista, int *votosTotale
         N = getItem(p, *lista).numVotes;
         N++;
         updateVotes(N, p, lista);
-        printf("* Vote: party %s numVotes %d\n", name, getItem(p, *lista).numVotes);
+        printf("* Vote: party %s numvotes %d\n", name, getItem(p, *lista).numVotes);
         *votosTotales = *votosTotales + 1;
     }
 }

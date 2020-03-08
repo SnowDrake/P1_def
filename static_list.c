@@ -26,7 +26,7 @@ tPosL last(tList L) {
     return L.lastPos;
 }
 tPosL next(tPosL p, tList L) {
-    if (p == LNULL) {
+    if (p == L.lastPos) {
         return LNULL;
     }
     else {
@@ -65,14 +65,15 @@ void deleteAtPosition(tPosL p, tList *L) {
 tItemL getItem(tPosL p, tList L) {
     return L.data[p];
 }
-tPosL findItem(const tPartyName name, tList L) {
+tPosL findItem(tPartyName name, tList L) {
     tPosL p = 0;
-    for (int i = 0; i < MAX; ++i) {
-        if (name != L.data[i].partyName) {
-            p = LNULL;
-        }
-        else {
+    for (int i = 0; (i < MAX) && (name != L.data[i].partyName); ++i) {
+        if (strcmp(name, L.data[i].partyName) == 0) {
             p = 0;
+            break;
+        }
+        else if (strcmp(name, L.data[i].partyName) != 0){
+            p = LNULL;
         }
     }
     return p;

@@ -105,10 +105,10 @@ void deleteList(tList* L) {
         free(p); // Liberamos p para cada una de las posiciones de la lista
     }
 }
-tPosL findItem(const tPartyName name, tList L) {
-    tPosL p = NULL;
-    for (p = L; (p != LNULL) && (p->data.partyName != name); p = p->next);
-    return p; // Devuelve LNULL si no está en la lista, o una posición válida de la lista
+tPosL findItem(tPartyName name, tList L) { // problema con esta función
+    tPosL p;
+    for (p = L; (p != LNULL) && (p->data.partyName != item.partyName); p = p->next);
+    return p;
 }
 bool isEmptyList(tList L) {
     if (L == LNULL) {

@@ -46,6 +46,23 @@ void crearPartido(tPartyName name, tList *lista) {
     }
 }
 
+void votarPartido(char name[NAME_LENGTH_LIMIT+1], tList *lista, int *votosTotales, int *votosNulos) {
+    tPosL p;
+    p = findItem(name, *lista);
+    int N = 0; // Variable que incrementa los votos del partido
+    if (p == LNULL) {
+        printf("+ Error: Vote not possible. %s not found. NULLVOTE\n", name);
+        *votosNulos = *votosNulos + 1;
+    }
+    else {
+        N = getItem(p, *lista).numVotes;
+        N++;
+        updateVotes(N, p, lista);
+        printf("* Vote: party %s numvotes %d\n", name, getItem(p, *lista).numVotes);
+        *votosTotales = *votosTotales + 1;
+    }
+}
+
 int main() {
     tList list;
     tPosL pos;
@@ -63,10 +80,6 @@ int main() {
     insertItem(item1, LNULL, &list);
     print_list(list);
 
-    int a = 0;
-    int b = 0;
-    float c = (float)a/(float)b;
-    printf("%f\n", c);
 
 
     /* insert */

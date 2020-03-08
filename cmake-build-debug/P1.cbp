@@ -44,8 +44,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DDYNAMIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
+					<Add option="-DSTATIC_LIST"/>
+					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -66,8 +66,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DDYNAMIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
+					<Add option="-DSTATIC_LIST"/>
+					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -88,8 +88,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DDYNAMIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
+					<Add option="-DSTATIC_LIST"/>
+					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -110,8 +110,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DDYNAMIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;new.txt&quot;"/>
+					<Add option="-DSTATIC_LIST"/>
+					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -126,16 +126,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/dynamic_list.c">
-			<Option target="main"/>
-			<Option target="test_lists"/>
-		</Unit>
-		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/dynamic_list.h">
-			<Option target="main"/>
-			<Option target="test_lists"/>
-		</Unit>
 		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/main.c">
 			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.c">
+			<Option target="main"/>
+			<Option target="test_lists"/>
+		</Unit>
+		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.h">
+			<Option target="main"/>
+			<Option target="test_lists"/>
 		</Unit>
 		<Unit filename="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/test.c">
 			<Option target="test_lists"/>
