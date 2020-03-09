@@ -76,7 +76,7 @@ float devolverParam(char param[NAME_LENGTH_LIMIT+1]) {
     return x;
 }
 
-void print_list_STATS(tList list, char param[NAME_LENGTH_LIMIT+1], int votosTotales, int votosNulos) {
+void print_list_STATS(tList list, char param[NAME_LENGTH_LIMIT+1], tNumVotes votosTotales, tNumVotes votosNulos) {
     tPosL pos;
     tItemL item;
 
@@ -110,7 +110,7 @@ void crearPartido(tPartyName name, tList *lista) {
     if (findItem(name, *lista) == LNULL) {
         check = insertItem(newItem, LNULL, lista);
         if (check == true) {
-            printf("* New: party %s\n", newItem.partyName);
+            printf("* New: party %s\n", getItem(findItem(name, *lista), *lista).partyName);
         }
         else {
             printf("+ Error: New not possible\n");
@@ -122,10 +122,10 @@ void crearPartido(tPartyName name, tList *lista) {
 
 }
 
-void votarPartido(tPartyName name, tList *lista, int *votosTotales, int *votosNulos) {
+void votarPartido(tPartyName name, tList *lista, tNumVotes *votosTotales, tNumVotes *votosNulos) {
     tPosL p;
     p = findItem(name, *lista);
-    int N = 0; // Variable que incrementa los votos del partido
+    int N=0; // Variable que incrementa los votos del partido
     if (p == LNULL) {
         printf("+ Error: Vote not possible. %s not found. NULLVOTE\n", name);
         *votosNulos = *votosNulos + 1;
@@ -139,8 +139,13 @@ void votarPartido(tPartyName name, tList *lista, int *votosTotales, int *votosNu
     }
 }
 
+void freeList(tList *L) {
+    while (!isEmptyList(*L)) {
+        deleteAtPosition(first(*L), L);
+    }
+}
 
-void processCommand(char command_number[CODE_LENGTH+1], char command, char param[NAME_LENGTH_LIMIT+1], tList *L, int *votosTotales, int *votosNulos) {
+void processCommand(char command_number[CODE_LENGTH+1], char command, char param[NAME_LENGTH_LIMIT+1], tList *L, tNumVotes *votosTotales, tNumVotes *votosNulos) {
 
     switch(command) {
         case 'N': {
@@ -154,10 +159,9 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
             // Votar al partido
             printf("********************\n");
             printf("%s %c: party %s\n", command_number, command, param);
-            print_list(*L);
+            //print_list(*L);
             votarPartido(param, L, votosTotales, votosNulos);
             //printf("Nulos = %d\n", votosNulos);
-            print_list(*L);
             break;
         }
         case 'S': {
@@ -194,10 +198,10 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
 }
 
 void readTasks(char *filename, tList *L) {
-    int *votosNulos;
-    int *votosTotales;
-    votosNulos = malloc(sizeof(int));
-    votosTotales = malloc(sizeof(int));
+    tNumVotes *votosNulos;
+    tNumVotes *votosTotales;
+    votosNulos = malloc(sizeof(tNumVotes));
+    votosTotales = malloc(sizeof(tNumVotes));
     *votosNulos = 0;
     *votosTotales = 0;
 
@@ -237,6 +241,9 @@ int main(int nargs, char **args) {
     }
 
     readTasks(file_name, L);
+
+    // liberar la lista
+    freeList(L);
 
     return 0;
 }

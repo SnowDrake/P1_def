@@ -107,7 +107,11 @@ void deleteList(tList* L) {
 }
 tPosL findItem(tPartyName name, tList L) { // problema con esta función
     tPosL p;
-    for (p = L; (p != LNULL) && (p->data.partyName != item.partyName); p = p->next);
+    p = L;
+    while ((p != LNULL) && (strcmp(p->data.partyName, name) != 0)) {
+        p = p->next;
+    }
+    //for (p = L; (p != LNULL) && (p->data.partyName != name); p = p->next);
     return p;
 }
 bool isEmptyList(tList L) {

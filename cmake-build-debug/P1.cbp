@@ -45,7 +45,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DSTATIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
+					<Add option="-DINPUT_FILE=&quot;vote.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -67,7 +67,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DSTATIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
+					<Add option="-DINPUT_FILE=&quot;vote.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -89,7 +89,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DSTATIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
+					<Add option="-DINPUT_FILE=&quot;vote.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
@@ -111,7 +111,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DSTATIC_LIST"/>
-					<Add option="-DINPUT_FILE=&quot;illegalize2.txt&quot;"/>
+					<Add option="-DINPUT_FILE=&quot;vote.txt&quot;"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>

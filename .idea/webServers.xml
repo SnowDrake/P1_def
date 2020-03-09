@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="ca94bafe-0b5b-4d22-82d7-1c3f03c6d624" name="10.10.5.120" url="http://10.10.5.120">
-        <fileTransfer host="10.10.5.120" port="22" rootFolder="/home/UDC/89560/linux/Escritorio/FIC_BOX" accessType="SFTP">
+      <webServer id="1172836f-7e66-4f7c-81b7-cba8c221e674" name="10.10.5.120" url="http://10.10.5.120">
+        <fileTransfer host="10.10.5.120" port="22" rootFolder="/home/UDC/89560/linux" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
