@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/dynamic_list.h
+types.h
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/types.h
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+
 /home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/list/list.h
 stdbool.h
 -
@@ -15,6 +27,22 @@ stdlib.h
 -
 ../types.h
 /home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/types.h
+
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/main.c
+stdio.h
+-
+types.h
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/types.h
+string.h
+-
+stdlib.h
+-
+static_list.h
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.h
+dynamic_list.h
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/dynamic_list.h
+list/list.h
+/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/list/list.h
 
 /home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.c
 static_list.h

@@ -127,7 +127,7 @@ void votarPartido(tPartyName name, tList *lista, tNumVotes *votosTotales, tNumVo
     p = findItem(name, *lista);
     int N=0; // Variable que incrementa los votos del partido
     if (p == LNULL) {
-        printf("+ Error: Vote not possible. %s not found. NULLVOTE\n", name);
+        printf("+ Error: Vote not possible. Party %s not found. NULLVOTE\n", name);
         *votosNulos = *votosNulos + 1;
     }
     else {
