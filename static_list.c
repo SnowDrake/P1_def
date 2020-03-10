@@ -1,10 +1,10 @@
 /*
  * TITLE: PROGRAMMING II LABS
  * SUBTITLE: Practical 1
- * AUTHOR 1: ***************************** LOGIN 1: **********
- * AUTHOR 2: ***************************** LOGIN 2: **********
- * GROUP: *.*
- * DATE: ** / ** / **
+ * AUTHOR 1: Picado Liñares, David LOGIN 1: david.picado
+ * AUTHOR 2: Otero Agraso, Samuel LOGIN 2: s.agraso
+ * GROUP: 1.5
+ * DATE: 16 / 03 / 2020
  */
 
 #include "static_list.h"
@@ -49,8 +49,8 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
         else {
             for (i = L->lastPos;i >= p + 1; --i) {
                 L->data[i] = L->data[i-1];
-                L->data[(int)p] = d;
             }
+            L->data[(int)p] = d;
         }
     }
     return true;
@@ -66,14 +66,10 @@ tItemL getItem(tPosL p, tList L) {
     return L.data[p];
 }
 tPosL findItem(tPartyName name, tList L) {
-    tPosL p = 0;
-    for (int i = 0; (i < MAX) && (name != L.data[i].partyName); ++i) {
+    tPosL p = LNULL;
+    for (int i = 0; (i < MAX); ++i) {
         if (strcmp(name, L.data[i].partyName) == 0) {
             p = i;
-            break;
-        }
-        else if (strcmp(name, L.data[i].partyName) != 0){
-            p = LNULL;
         }
     }
     return p;

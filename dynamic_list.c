@@ -1,10 +1,10 @@
 /*
  * TITLE: PROGRAMMING II LABS
  * SUBTITLE: Practical 1
- * AUTHOR 1: ***************************** LOGIN 1: **********
- * AUTHOR 2: ***************************** LOGIN 2: **********
- * GROUP: *.*
- * DATE: ** / ** / **
+ * AUTHOR 1: Picado Liñares, David LOGIN 1: david.picado
+ * AUTHOR 2: Otero Agraso, Samuel LOGIN 2: s.agraso
+ * GROUP: 1.5
+ * DATE: 16 / 03 / 2020
  */
 
 #include "dynamic_list.h"
@@ -73,11 +73,11 @@ bool copyList(tList L1, tList* L2) { // No es imprescindible que L2 sea una list
     return retorno;
 }
 void updateVotes(tNumVotes a, tPosL p, tList* L) {
-    p->data.numVotes += a;
+    p->data.numVotes = a;
 }
 void deleteAtPosition(tPosL p, tList* L) {
     // Tenemos tres posibles situaciones
-    // Que p sea ka cabeza de la lista
+    // Que p sea la cabeza de la lista
     // Que p sea el último de la lista
     // Que p sea otro elemento de la lista
     // Al final tendremos que liberar comunmente a p
@@ -105,13 +105,12 @@ void deleteList(tList* L) {
         free(p); // Liberamos p para cada una de las posiciones de la lista
     }
 }
-tPosL findItem(tPartyName name, tList L) { // problema con esta función
+tPosL findItem(tPartyName name, tList L) {
     tPosL p;
     p = L;
     while ((p != LNULL) && (strcmp(p->data.partyName, name) != 0)) {
         p = p->next;
     }
-    //for (p = L; (p != LNULL) && (p->data.partyName != name); p = p->next);
     return p;
 }
 bool isEmptyList(tList L) {

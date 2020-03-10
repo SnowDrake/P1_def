@@ -1,10 +1,10 @@
 /*
  * TITLE: PROGRAMMING II LABS
  * SUBTITLE: Practical 1
- * AUTHOR 1: ***************************** LOGIN 1: **********
- * AUTHOR 2: ***************************** LOGIN 2: **********
- * GROUP: *.*
- * DATE: ** / ** / **
+ * AUTHOR 1: Picado Liñares, David LOGIN 1: david.picado
+ * AUTHOR 2: Otero Agraso, Samuel LOGIN 2: s.agraso
+ * GROUP: 1.5
+ * DATE: 16 / 03 / 2020
  */
 
 #include <stdio.h>
@@ -24,36 +24,7 @@
 #include "list/list.h"
 #endif
 
-int countElements(tList L) {
-    tPosL pos;
-    int elements = 0;
-    if (isEmptyList(L) == true) {
-        elements = 0;
-    }
-    else {
-        pos = first(L);
-        while (pos != LNULL) {
-            elements++;
-            pos = next(pos, L);
-        }
-    }
-    return elements;
-}
-void printElementsReverse(tList L) {
-    tPosL pos;
-    tItemL item;
-
-    if (!isEmptyList(L)) {
-        pos = last(L);
-        while (pos != first(L)) {
-            item = getItem(pos, L);
-            printf("%s numvotes %d", item.partyName, item.numVotes);
-            pos = previous(pos, L);
-        }
-    }
-}
-
-void print_list(tList list) {
+void print_list(tList list) {  // Función usada para mostrar la lista, usada para facilitar el Debug
     tPosL pos;
     tItemL item;
 
@@ -69,7 +40,7 @@ void print_list(tList list) {
     printf(")\n");
 }
 
-float devolverParam(char param[NAME_LENGTH_LIMIT+1]) {
+float devolverParam(char param[NAME_LENGTH_LIMIT+1]) {  // Función usada para convertir un string en un entero
     const char * str = param;
     float x;
     sscanf(param, "%f", &x);
@@ -101,38 +72,43 @@ void print_list_STATS(tList list, char param[NAME_LENGTH_LIMIT+1], tNumVotes vot
 }
 
 void crearPartido(tPartyName name, tList *lista) {
+    /*
+     * Declaración de una variable auxiliar de tipo tItemL
+     * para inicializar el partido a votos 0 y como nombre
+     * el valor del string "name"
+    */
     struct tItemL newItem;
     newItem.numVotes = 0;
     strcpy(newItem.partyName, name);
 
-    bool check;
+    bool check; // Variable booleana de comprobación
 
     if (findItem(name, *lista) == LNULL) {
-        check = insertItem(newItem, LNULL, lista);
+        check = insertItem(newItem, LNULL, lista); // Saber si se ha insertado correctamente el partido en la lista
         if (check == true) {
-            printf("* New: party %s\n", getItem(findItem(name, *lista), *lista).partyName);
+            printf("* New: party %s\n", getItem(findItem(name, *lista), *lista).partyName); // CORRECTO
         }
         else {
-            printf("+ Error: New not possible\n");
+            printf("+ Error: New not possible\n"); // ERROR
         }
     }
     else {
-        printf("+ Error: New not possible\n");
+        printf("+ Error: New not possible\n"); // El partido ya está en la lista
     }
 
 }
 
 void votarPartido(tPartyName name, tList *lista, tNumVotes *votosTotales, tNumVotes *votosNulos) {
-    tPosL p;
+    tPosL p; // Variable auxiliar
     p = findItem(name, *lista);
-    int N=0; // Variable que incrementa los votos del partido
-    if (p == LNULL) {
+    int N = 0; // Variable que incrementa los votos del partido
+    if (p == LNULL) { // El partido no existe en la lista
         printf("+ Error: Vote not possible. Party %s not found. NULLVOTE\n", name);
-        *votosNulos = *votosNulos + 1;
+        *votosNulos = *votosNulos + 1; // Aumentamos los votos nulos
     }
     else {
-        N = getItem(p, *lista).numVotes;
-        N++;
+        N = getItem(p, *lista).numVotes; // Valor de N a los votos del partido previo a ser votado por la función
+        N++; // Incrementamos
         updateVotes(N, p, lista);
         printf("* Vote: party %s numvotes %d\n", name, getItem(p, *lista).numVotes);
         *votosTotales = *votosTotales + 1;
@@ -180,7 +156,7 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
             tPosL p;
             p = findItem(param,*L);
             if(p == LNULL)
-                printf("+ Error: Illegalize not possible\n");
+                printf("+ Error: Illegalize not possible\n"); // El partido no se encuentra en la lista
             else {
                 *votosNulos = *votosNulos + getItem(p, *L).numVotes;
                 *votosTotales = *votosTotales - getItem(p, *L).numVotes;
@@ -198,8 +174,8 @@ void processCommand(char command_number[CODE_LENGTH+1], char command, char param
 }
 
 void readTasks(char *filename, tList *L) {
-    tNumVotes *votosNulos;
-    tNumVotes *votosTotales;
+    tNumVotes *votosNulos; /*Puntero de tipo tNumVotes para pasar los votos nulos registrados en la lista*/
+    tNumVotes *votosTotales; /*Puntero de tipo tNumVotes para pasar los votos totales válido de la lista*/
     votosNulos = malloc(sizeof(tNumVotes));
     votosTotales = malloc(sizeof(tNumVotes));
     *votosNulos = 0;
@@ -226,6 +202,11 @@ void readTasks(char *filename, tList *L) {
 
 int main(int nargs, char **args) {
 
+    /*
+     * Creación de la variable tList
+     * e inicialización de la misma
+    */
+
     tList *L;
     createEmptyList(L);
 
@@ -242,7 +223,7 @@ int main(int nargs, char **args) {
 
     readTasks(file_name, L);
 
-    // liberar la lista
+    // Función para liberar la lista de la memoria asociada
     freeList(L);
 
     return 0;
