@@ -46,10 +46,10 @@ RM = /home/david/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/bin/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1"
+CMAKE_SOURCE_DIR = "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -62,29 +62,29 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/main.c.o   -c "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/main.c.o   -c "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/main.c"
 
 CMakeFiles/main.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/main.c" > CMakeFiles/main.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/main.c" > CMakeFiles/main.dir/main.c.i
 
 CMakeFiles/main.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/main.c" -o CMakeFiles/main.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/main.c" -o CMakeFiles/main.dir/main.c.s
 
 CMakeFiles/main.dir/static_list.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/static_list.c.o: ../static_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/static_list.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/static_list.c.o   -c "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/static_list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/static_list.c.o   -c "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/static_list.c"
 
 CMakeFiles/main.dir/static_list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/static_list.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.c" > CMakeFiles/main.dir/static_list.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/static_list.c" > CMakeFiles/main.dir/static_list.c.i
 
 CMakeFiles/main.dir/static_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/static_list.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/static_list.c" -o CMakeFiles/main.dir/static_list.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/static_list.c" -o CMakeFiles/main.dir/static_list.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -98,7 +98,7 @@ main_EXTERNAL_OBJECTS =
 ../bin/main: CMakeFiles/main.dir/static_list.c.o
 ../bin/main: CMakeFiles/main.dir/build.make
 ../bin/main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../bin/main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../bin/main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +111,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1/cmake-build-debug/CMakeFiles/main.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug" "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles/main.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

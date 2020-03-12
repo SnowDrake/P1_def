@@ -11,7 +11,6 @@
 #include "list/list.h"
 #include <stdbool.h>
 
-/* Write your code here... */
 
 void createEmptyList(tList *L) {
     L->lastPos = LNULL;
@@ -38,7 +37,7 @@ tPosL previous(tPosL p, tList L) {
 }
 bool insertItem(tItemL d, tPosL p, tList *L) {
     tPosL i;
-    if (L->lastPos == MAX - 1) {
+    if (L->lastPos == MAX - 1) { // Lista completa
         return false;
     }
     else {
@@ -50,7 +49,7 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
             for (i = L->lastPos;i >= p + 1; --i) {
                 L->data[i] = L->data[i-1];
             }
-            L->data[(int)p] = d;
+            L->data[p] = d;
         }
     }
     return true;
@@ -67,9 +66,14 @@ tItemL getItem(tPosL p, tList L) {
 }
 tPosL findItem(tPartyName name, tList L) {
     tPosL p = LNULL;
-    for (int i = 0; (i < MAX); ++i) {
-        if (strcmp(name, L.data[i].partyName) == 0) {
-            p = i;
+    if (L.lastPos == LNULL) {
+        return LNULL;
+    }
+    else {
+        for (int i = 0; (i < MAX); ++i) {
+            if (strcmp(name, L.data[i].partyName) == 0) { // Uso de strcmp para comparar dos strings
+                p = i;
+            }
         }
     }
     return p;
@@ -84,7 +88,7 @@ bool copyList(tList L1, tList* L2) {
 }
 void deleteList(tList* L) {
     while (L->lastPos != LNULL) {
-        L->lastPos = LNULL; // el array seguirá estando en memoria
+        L->lastPos = LNULL; // El array seguirá estando en memoria
     }
 }
 void updateVotes(tNumVotes a, tPosL p, tList* L) {

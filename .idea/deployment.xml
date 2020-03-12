@@ -5,7 +5,7 @@
       <paths name="10.10.5.120">
         <serverdata>
           <mappings>
-            <mapping deploy="/Escritorio/FIC_BOX/PRO2/P1" local="$PROJECT_DIR$/bin" web="/" />
+            <mapping deploy="/Escritorio/FIC_BOX/PRO2/P1_def/P1_def-master" local="$PROJECT_DIR$/bin" web="/" />
           </mappings>
         </serverdata>
       </paths>

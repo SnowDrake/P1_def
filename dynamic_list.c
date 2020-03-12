@@ -9,14 +9,13 @@
 
 #include "dynamic_list.h"
 
-/* Write your code here... */
 
-bool createNode(tPosL * p) { // función interna a este archivo, no aparace en el archivo de cabecera
+bool createNode(tPosL * p) { // Función interna a este archivo, no aparace en el archivo de cabecera
     *p = malloc(sizeof(struct tNode));
     return (*p == LNULL?false:true);
-}
+} // Nos permitirá crear los nodos para la lista
 void createEmptyList(tList* L) {
-    *L = LNULL; // creación de una lista vacía, donde el primer puntero de la lista apunte a ninguna dirección de memoria
+    *L = LNULL; // Creación de una lista vacía, donde el primer puntero de la lista apunte a ninguna dirección de memoria
 }
 bool insertItem(tItemL d, tPosL p, tList* L) {
     tPosL q, r;
@@ -36,13 +35,13 @@ bool insertItem(tItemL d, tPosL p, tList* L) {
         else if (p == *L) { // insertar en CABEZA
             q->next = *L;
             *L = q;
-        }
+        } // fin de en CABEZA
         else { // MEDIO
             q->data = p->data;
             p->data = d;
             q->next = p->next;
             p->next = q;
-        }
+        } // fin del MEDIO
         return true;
     }
 }
@@ -67,7 +66,7 @@ bool copyList(tList L1, tList* L2) { // No es imprescindible que L2 sea una list
         }
         if (p != LNULL) {
             retorno = false;
-            deleteList(L2); // Fallamos en la creación de la lista
+            deleteList(L2); // Fallamos en la creación de la lista, borramos
         }
     }
     return retorno;
@@ -108,7 +107,7 @@ void deleteList(tList* L) {
 tPosL findItem(tPartyName name, tList L) {
     tPosL p;
     p = L;
-    while ((p != LNULL) && (strcmp(p->data.partyName, name) != 0)) {
+    while ((p != LNULL) && (strcmp(p->data.partyName, name) != 0)) { // Usamos strcmp para comparar dos strings
         p = p->next;
     }
     return p;
@@ -137,7 +136,7 @@ tPosL previous(tPosL p, tList L) {
     if (p == L) { // En la lista solo hay un elemento
         return LNULL;
     }
-    else {
+    else { // Desventaja de simple enlace, debemos recorrer toda la lista hasta que el siguiente de q sea nuestro p
         for (q = L; q->next != p; q = q->next);
         return q;
     }
