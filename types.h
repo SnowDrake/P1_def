@@ -10,8 +10,5 @@ typedef struct tItemL {
     tPartyName partyName;
     tNumVotes numVotes;
 } tItemL;
-// Variables usadas para la función STATS
-//int votosTotales = 0;
-//int votosNulos = 0;
 
 #endif //TYPES_H
