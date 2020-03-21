@@ -191,8 +191,8 @@ int main(int nargs, char **args) {
      * e inicialización de la misma
     */
 
-    tList *L;
-    createEmptyList(L);
+    tList L;
+    createEmptyList(&L);
 
 
     char *file_name = "new.txt";
@@ -205,10 +205,10 @@ int main(int nargs, char **args) {
 #endif
     }
 
-    readTasks(file_name, L);
+    readTasks(file_name, &L);
 
     // Función para liberar la lista de la memoria asociada
-    freeList(L);
+    freeList(&L);
 
     return 0;
 }
