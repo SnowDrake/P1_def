@@ -73,29 +73,29 @@ CMakeFiles/main.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/main.c" -o CMakeFiles/main.dir/main.c.s
 
-CMakeFiles/main.dir/static_list.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/static_list.c.o: ../static_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/static_list.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/static_list.c.o   -c "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/static_list.c"
+CMakeFiles/main.dir/dynamic_list.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/dynamic_list.c.o: ../dynamic_list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/dynamic_list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/dynamic_list.c.o   -c "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/dynamic_list.c"
 
-CMakeFiles/main.dir/static_list.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/static_list.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/static_list.c" > CMakeFiles/main.dir/static_list.c.i
+CMakeFiles/main.dir/dynamic_list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/dynamic_list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/dynamic_list.c" > CMakeFiles/main.dir/dynamic_list.c.i
 
-CMakeFiles/main.dir/static_list.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/static_list.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/static_list.c" -o CMakeFiles/main.dir/static_list.c.s
+CMakeFiles/main.dir/dynamic_list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/dynamic_list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/dynamic_list.c" -o CMakeFiles/main.dir/dynamic_list.c.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.c.o" \
-"CMakeFiles/main.dir/static_list.c.o"
+"CMakeFiles/main.dir/dynamic_list.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 ../bin/main: CMakeFiles/main.dir/main.c.o
-../bin/main: CMakeFiles/main.dir/static_list.c.o
+../bin/main: CMakeFiles/main.dir/dynamic_list.c.o
 ../bin/main: CMakeFiles/main.dir/build.make
 ../bin/main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/david/FIC/Primer Curso/Q2/Programación II/Practicas/Copia_base/P1_v.1.1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../bin/main"

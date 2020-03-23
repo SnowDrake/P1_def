@@ -11,7 +11,8 @@
 #define STATIC_LIST_H
 
 #include "types.h"
-#include "list/list.h"
+#include <string.h>
+#include <stdbool.h>
 
 #define LNULL -1
 #define MAX 25

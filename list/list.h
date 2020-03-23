@@ -7,7 +7,6 @@
 
 
 #include <stdbool.h>
-#include <string.h>
 #include <stdlib.h>
 /* Type definition */
 #include "../types.h"

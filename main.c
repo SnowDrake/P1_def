@@ -20,9 +20,6 @@
 #ifdef DYNAMIC_LIST
 #include "dynamic_list.h"
 #endif
-#ifdef TEST_LIST
-#include "list/list.h"
-#endif
 
 
 float devolverParam(char param[NAME_LENGTH_LIMIT+1]) {  // Función usada para convertir un string en un entero

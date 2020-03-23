@@ -8,8 +8,6 @@
  */
 
 #include "static_list.h"
-#include "list/list.h"
-#include <stdbool.h>
 
 
 void createEmptyList(tList *L) {

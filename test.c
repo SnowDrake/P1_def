@@ -7,9 +7,6 @@
 #ifdef DYNAMIC_LIST
 #include "dynamic_list.h"
 #endif
-#ifdef TEST_LIST
-#include "list/list.h"
-#endif
 
 void print_list(tList list) {
     tPosL pos;
